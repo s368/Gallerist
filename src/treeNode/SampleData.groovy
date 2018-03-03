@@ -42,4 +42,10 @@ three:					{
 	
 			return root;
 		}
+		
+		public static void main(String [] args)
+		{
+			getSet1();
+			println("Hello World!"); // Display the string.
+		}
 	}
