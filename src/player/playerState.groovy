@@ -23,5 +23,9 @@ class playerState {
 
 	public int influence;
 	public int money;
-		
+	
+	public int ticketBrown;
+	public int ticketRose;
+	public int ticketWhite;
+	
 }
