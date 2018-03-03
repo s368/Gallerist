@@ -4,7 +4,8 @@ import gameResources.FameStars
 
 class WorkOfArt {
 
-	public int defaulFameIndex;
-	public FameStars defaultFameStars;
+	public ArtType type;
+	public TicketBonus tickets;
+	public  int promo;
 	
 }
