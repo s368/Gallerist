@@ -6,10 +6,10 @@ class ContractCard {
 	
 	public ArtType type;
 	public ContractBonusType bonus;
-	public boolean contractBonusUsed;
+	public boolean contractBonusUsed = false;
 	
-	public boolean closed;
+	public boolean closed = false;
 	public ClosedContractBonus closedContractBonus;
-	public boolean closedContractBonusUsed;
+	public boolean closedContractBonusUsed = false;
 
 }
