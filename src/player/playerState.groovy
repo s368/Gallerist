@@ -19,7 +19,7 @@ class playerState {
 	public ReputationTile thirdSlotReputation;
 	public boolean masterpieceSlot;
 	
-	public ContractSlot[] contractSlot;//fixed size = 3
+	//public ContractSlot[] contractSlot;//fixed size = 3
 
 	public int influence;
 	public int money;
