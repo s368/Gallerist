@@ -9,26 +9,26 @@ class ContractCardDeck {
 	public static List<ContractCard> deck;
 	public static List<ContractCard> discard;
 
-	public static ContractCard card_01;
-	public static ContractCard card_02;
-	public static ContractCard card_03;
-	public static ContractCard card_04;
-	public static ContractCard card_05;
-	public static ContractCard card_06;
-	public static ContractCard card_07;
-	public static ContractCard card_08;
-	public static ContractCard card_09;
-	public static ContractCard card_10;
-	public static ContractCard card_11;
-	public static ContractCard card_12;
-	public static ContractCard card_13;
-	public static ContractCard card_14;
-	public static ContractCard card_15;
-	public static ContractCard card_16;
-	public static ContractCard card_17;
-	public static ContractCard card_18;
-	public static ContractCard card_19;
-	public static ContractCard card_20;
+	public static ContractCard card_01 = new ContractCard();
+	public static ContractCard card_02 = new ContractCard();
+	public static ContractCard card_03 = new ContractCard();
+	public static ContractCard card_04 = new ContractCard();
+	public static ContractCard card_05 = new ContractCard();
+	public static ContractCard card_06 = new ContractCard();
+	public static ContractCard card_07 = new ContractCard();
+	public static ContractCard card_08 = new ContractCard();
+	public static ContractCard card_09 = new ContractCard();
+	public static ContractCard card_10 = new ContractCard();
+	public static ContractCard card_11 = new ContractCard();
+	public static ContractCard card_12 = new ContractCard();
+	public static ContractCard card_13 = new ContractCard();
+	public static ContractCard card_14 = new ContractCard();
+	public static ContractCard card_15 = new ContractCard();
+	public static ContractCard card_16 = new ContractCard();
+	public static ContractCard card_17 = new ContractCard();
+	public static ContractCard card_18 = new ContractCard();
+	public static ContractCard card_19 = new ContractCard();
+	public static ContractCard card_20 = new ContractCard();
 	
 	public void initDeck()
 	{

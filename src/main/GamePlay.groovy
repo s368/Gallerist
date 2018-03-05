@@ -1,5 +1,7 @@
 package main
 
+import gameResources.Contract.ContractCardDeck
+
 class GamePlay {
 
 	static main(args) {
@@ -16,7 +18,13 @@ class GamePlay {
 		println("Hi, Word from initGameBoard!");
 		
 		initIntMarketReputation();
-		initIntMarketAuction();
+		//initIntMarketAuction();
+		
+		ContractCardDeck cd = new ContractCardDeck();
+		cd.initDeck();
+		
+		println("type = " + cd.card_02.type.toString());
+		println("bonus = " + cd.card_02.bonus.toString());
 		
 	}
 	
