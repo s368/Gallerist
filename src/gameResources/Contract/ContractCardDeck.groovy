@@ -40,6 +40,17 @@ class ContractCardDeck {
 		[name:"B",age:45]
 		]);
 		
+	public static def textDB = [
+		[art:"*",bonus:"GetContract"],	
+		[art:"*",bonus:"GetAssistent"],	
+		[art:"*",bonus:"GetVisitorFromBag_Any"],	
+		[art:"*",bonus:"GetVisitorFromPlaza_BrownOrRose"],	
+		[art:"Photo",bonus:"GetMoney"],	
+		[art:"Paint",bonus:"GetMoney"],	
+		[art:"Digital",bonus:"GetInfluence"],	
+		[art:"Sculpture",bonus:"GetInfluence"],	
+	]
+	
 	public void initDeck()
 	{
 		//4 - contract
