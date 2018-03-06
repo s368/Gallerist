@@ -4,7 +4,7 @@ import gameResources.workOfArt.ArtType
 
 class ContractCardDeck {
 	
-	public int number = 20;
+	public static int number = 20;
 	
 	public static List<ContractCard> deck;
 	public static List<ContractCard> discard;
@@ -30,6 +30,16 @@ class ContractCardDeck {
 	public static ContractCard card_19 = new ContractCard();
 	public static ContractCard card_20 = new ContractCard();
 	
+	public static def personDetails = [
+		[firstName:'John', lastName:'Doe', age:25],
+		[firstName:'S', lastName:'S', age:25]
+		];
+	
+	public static List<List<Map<String,String>>> listList = new ArrayList<List<Map<String,String>>>([
+		[name:"A",age:25],
+		[name:"B",age:45]
+		]);
+		
 	public void initDeck()
 	{
 		//4 - contract
