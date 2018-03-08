@@ -10,14 +10,14 @@ class ContractCardDeck {
 	public static Deck<ContractCard> deck = new Deck<ContractCard>();
 	public static Deck<ContractCard> discard = new Deck<ContractCard>();
 	
-	public ContractCardDeck(def a = [])
+	public ContractCardDeck(a = [])
 	{
 		ContractCard cc = new ContractCard();
 		//ContractCardDeck ccBufferDeck = new ContractCardDeck();
 		
 		println("ContractCardDeck: " + a);
 		
-		for(def item in a)
+		for(item in a)
 		{
 			
 			if(item.art != "*")
