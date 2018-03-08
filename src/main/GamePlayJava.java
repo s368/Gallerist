@@ -23,10 +23,12 @@ class GamePlayJava {
 		
 		System.out.println("number = " + ContractCardDeck.number);
 		
+/*
 		System.out.println(ContractCardDeck.personDetails.get(1).getAt("age"));
 		System.out.println("value = " + ContractCardDeck.personDetails.firstName[1]);
 		
 		System.out.println("value listList = " + ContractCardDeck.listList.name[1]);
+*/
 		
 /*
 		ContractCardDeck cd = new ContractCardDeck();
