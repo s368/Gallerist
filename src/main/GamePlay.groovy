@@ -2,12 +2,13 @@ package main
 
 import gameResources.Contract.ContractCardDeck
 import groovy.json.JsonSlurper
+import gameResources.textDB
 
 class GamePlay {
 
 	static main(args) {
 		
-		ContractCardDeck ccDeck = new ContractCardDeck();
+		ContractCardDeck ccDeck = new ContractCardDeck(textDB.contractCardList);
 		
 		println("Hi, Word from main!");
 		
@@ -25,10 +26,12 @@ class GamePlay {
 		
 		println("number = " + ContractCardDeck.number);
 		
+/*
 		println(ContractCardDeck.personDetails.get(1).getAt("age"));
 		println("value = " + ContractCardDeck.personDetails.firstName[1]);
 		
 		println("value listList = " + ContractCardDeck.listList.name[1]);
+*/
 		
 /*
 		ContractCardDeck cd = new ContractCardDeck();
