@@ -7,6 +7,8 @@ class GamePlay {
 
 	static main(args) {
 		
+		ContractCardDeck ccDeck = new ContractCardDeck();
+		
 		println("Hi, Word from main!");
 		
 		initGameBoard();
