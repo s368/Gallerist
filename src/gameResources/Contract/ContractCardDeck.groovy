@@ -56,10 +56,11 @@ class ContractCardDeck {
 		}//cycle by textDB list.
 		
 		println("number of contract cards = " + deck.localt.size());
+		this.shuffle();
 	}//end of constructor.
 	
 	public shuffle()
 	{
-		
+		Collections.shuffle();
 	}
 }
