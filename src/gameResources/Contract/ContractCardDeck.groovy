@@ -58,9 +58,4 @@ class ContractCardDeck {
 		println("number of contract cards = " + deck.localt.size());
 		this.shuffle();
 	}//end of constructor.
-	
-	public shuffle()
-	{
-		Collections.shuffle();
-	}
 }

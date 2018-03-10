@@ -15,5 +15,15 @@ class Deck<T>
    {
 	  this.localt.add(plocal);
    }
+   
+   public shuffle()
+   {
+	   Collections.shuffle(this.localt);
+   }
+
+   public T deal()
+   {
+	   return localt.pop();
+   }
 }
 
