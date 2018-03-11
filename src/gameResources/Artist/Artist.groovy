@@ -11,11 +11,10 @@ class Artist {
 	public FameStars defaultFameStars;
 	public int promo;
 	
-	public ArtType type;
+	public ArtType art;
 	public ColorType color;
 	
 	//opened side
 	public int currentFameIndex;
 	public FameRoad fameRoad;
-
 }
