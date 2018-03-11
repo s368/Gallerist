@@ -21,7 +21,7 @@ class Deck<T>
 	   Collections.shuffle(this.localt);
    }
 
-   public T deal()
+   public T dealOne()
    {
 	   return localt.pop();
    }
