@@ -12,25 +12,67 @@ class ProposedContracts {
 	
 	public ProposedContracts()
 	{
-		for(i in 0..<number)
+/*
+ 		for(i in 0..<number)
 		{
 			println("proposedContracts = " + i);
 			//proposedContracts.push(new ContractCard());
 			proposedContracts.push(ccDeck.deck.dealOne());
 		}
+*/
+		this.refillContracts();
 	}
 	
-	public void refill()
+	public void refillContracts()
 	{
+		this.refillDeckIfEmpty();
+		
 		for(i in 0..<number)
 		{
-			if(proposedContracts[i] == null)
+			if(proposedContracts.getAt(i) == null)
 			{
 				println("emty =" + i);
-				proposedContracts[i] = ccDeck.deck.dealOne();
-			}		
+				proposedContracts.putAt(i,ccDeck.deck.dealOne());
+			}
+			else
+			{
+				println("already filled = " + i);
+			}
 		}
 	}
+
+	public void refillAllContracts()
+	{
+		this.refillDeckIfEmpty();
+		
+		for(i in 0..<number)
+		{
+			if(proposedContracts.getAt(i) == null)
+			{
+				println("emty =" + i);
+				proposedContracts.putAt(i,ccDeck.deck.dealOne());
+			}
+			else
+			{
+				println("already filled = " + i);
+				ccDeck.discard.localt(proposedContracts.getAt(i));
+				proposedContracts.putAt(i,ccDeck.deck.dealOne());
+			}
+		}
+	}
+
+	public void refillDeckIfEmpty()
+	{
+		if(!ccDeck.deck.localt)
+			{
+				println("empty deck");
+				ccDeck.deck.localt.addAll(ccDeck.discard.localt);
+			}
+			else
+			{
+				println("not empty deck");
+			}
+	}	
 	
 	public static void main(args)
 	{
