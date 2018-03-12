@@ -57,9 +57,4 @@ class ContractCardDeck {
 		
 		println("number of contract cards = " + deck.localt.size());
 	}//end of constructor.
-	
-	public shuffle()
-	{
-		
-	}
 }

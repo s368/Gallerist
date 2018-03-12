@@ -15,5 +15,10 @@ class Deck<T>
    {
 	  this.localt.add(plocal);
    }
+   
+   public void shuffle()
+   {
+	   
+   }
 }
 
