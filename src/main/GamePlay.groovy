@@ -6,10 +6,9 @@ import gameResources.textDB
 
 class GamePlay {
 
+	static ContractCardDeck ccDeck = new ContractCardDeck(textDB.contractCardList);
+
 	static main(args) {
-		
-		ContractCardDeck ccDeck = new ContractCardDeck(textDB.contractCardList);
-		
 		println("Hi, Word from main!");
 		
 		initGameBoard();
@@ -24,7 +23,7 @@ class GamePlay {
 		initIntMarketReputation();
 		//initIntMarketAuction();
 		
-		println("number = " + ContractCardDeck.number);
+		println("number = " + ccDeck.number);
 		
 /*
 		println(ContractCardDeck.personDetails.get(1).getAt("age"));

@@ -1,7 +1,8 @@
 package main;
 
+import gameResources.textDB;
 import gameResources.Contract.ContractCardDeck;
-import groovy.json.JsonSlurper;
+//import groovy.json.JsonSlurper;
 
 class GamePlayJava {
 
@@ -17,12 +18,14 @@ class GamePlayJava {
 	public static void initGameBoard()
 	{
 		
+		ContractCardDeck ccDeck = new ContractCardDeck(textDB.contractCardList);
+
 		System.out.println("Hi, Word from initGameBoard!");
 		
 		initIntMarketReputation();
 		//initIntMarketAuction();
 		
-		System.out.println("number = " + ContractCardDeck.number);
+		System.out.println("number = " + ccDeck.number);
 		
 /*
 		System.out.println(ContractCardDeck.personDetails.get(1).getAt("age"));

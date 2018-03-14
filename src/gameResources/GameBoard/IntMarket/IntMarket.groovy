@@ -9,15 +9,15 @@ class IntMarket {
 	public int columnInfluenceTwo = 2;
 	public int columnInfluenceThree = 1;
 	
-	public static Map<ArtType,ReputationTile> reputationColumnOne;
-	public static Map<ArtType,ReputationTile> reputationColumnTwo;
-	public static Map<ArtType,ReputationTile> reputationColumnThree;
+	public Map<ArtType,ReputationTile> reputationColumnOne = new HashMap<ArtType,ReputationTile>();
+	public Map<ArtType,ReputationTile> reputationColumnTwo;
+	public Map<ArtType,ReputationTile> reputationColumnThree;
 	
-	public static Map<String,AuctionBonusType> auctionColumnOne;
-	public static Map<String,AuctionBonusType> auctionColumnTwo;
-	public static Map<String,AuctionBonusType> auctionColumnThree;
+	public Map<String,AuctionBonusType> auctionColumnOne = new HashMap<String,AuctionBonusType>();
+	public Map<String,AuctionBonusType> auctionColumnTwo = new HashMap<String,AuctionBonusType>();
+	public Map<String,AuctionBonusType> auctionColumnThree = new HashMap<String,AuctionBonusType>();
 	
-	public static initAuctionColumnOne()
+	public IntMarket()
 	{
 		auctionColumnOne.put("1",AuctionBonusType.GetTicketOne);
 		auctionColumnOne.put("3",AuctionBonusType.GetAssistent);
@@ -31,5 +31,15 @@ class IntMarket {
 		auctionColumnThree.put("3",AuctionBonusType.GetMoney);
 		auctionColumnThree.put("6",AuctionBonusType.GetInfluence);
 
+	}
+	
+	static main(args)
+	{
+		IntMarket im = new IntMarket();
+		for(item in im.auctionColumnOne)
+		{
+			println("key = " + item.key);
+			println("value = " + item.value);
+		}
 	}
 }

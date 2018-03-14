@@ -5,10 +5,10 @@ import utils.Deck
 
 class ContractCardDeck {
 	
-	public static int number = 20;
+	public int number = 20;
 	
-	public static Deck<ContractCard> deck = new Deck<ContractCard>();
-	public static Deck<ContractCard> discard = new Deck<ContractCard>();
+	public Deck<ContractCard> deck = new Deck<ContractCard>();
+	public Deck<ContractCard> discard = new Deck<ContractCard>();
 	
 	public ContractCardDeck(a = [])
 	{
