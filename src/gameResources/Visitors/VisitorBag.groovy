@@ -30,7 +30,7 @@ class VisitorBag {
 			}
 		}
 		
-//		this.bag.shuffle();
+		this.bag.shuffle();
 	}
 	
 	public addCopy(Visitor vOld)
