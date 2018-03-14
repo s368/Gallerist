@@ -16,9 +16,14 @@ class Deck<T>
 	  this.localt.add(plocal);
    }
    
-   public void shuffle()
+   public shuffle()
    {
-	   
+	   Collections.shuffle(this.localt);
+   }
+
+   public T dealOne()
+   {
+	   return localt.pop();
    }
 }
 
