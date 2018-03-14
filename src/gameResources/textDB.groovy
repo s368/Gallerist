@@ -31,4 +31,9 @@ class textDB {
 		[fame:5,star:"GreenOne",promo:1,art:"Paint",color:"blue",road:[0,6,9,12,15,19]],
 		[fame:10,star:"GreenThree",promo:3,art:"Sculpture",color:"red",road:[0,0,0,12,15,19]],
 	]
+
+	public static def visitorList = [
+		[rose:14,brown:14,white:12]
+	]
+
 }
