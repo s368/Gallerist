@@ -15,44 +15,25 @@ class ContractCardDeck {
 	public ContractCardDeck(a = [])
 	{
 		ContractCard cc = new ContractCard();
-		//ContractCardDeck ccBufferDeck = new ContractCardDeck();
-		
-		println("ContractCardDeck: " + a);
 		
 		for(item in a)
 		{
 			
 			if(item.art != "*")
 			{
-				println("ART=" + item.art + "\tBONUS=" +item.bonus)
-				
 				cc.art = item.art;
 				cc.bonus = item.bonus;
 				
-				if(cc.bonus == ContractBonusType.GetInfluence)
-				{
-					println("cc=" + cc.bonus);
-				}
-				
 				this.addCopy(cc);
-				println("deck=" + deck.get().art);
 			}
 			else//set of 'art'.
 			{
 				for(art in ArtType)
 				{
-					println("aaa=" + art);
 					cc.art = art;
 					cc.bonus = item.bonus;
-
-					if(cc.bonus == ContractBonusType.GetInfluence)
-						{
-							println("cc=" + cc.bonus);
-						}
 						
-						this.addCopy(cc);
-						println("deck=" + deck.get().art);
-		
+					this.addCopy(cc);
 				}//cycle by 'art' for '*'.
 			}//e.g. "Paint" vs "*".
 		}//cycle by textDB list.
