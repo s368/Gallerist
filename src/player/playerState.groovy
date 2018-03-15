@@ -1,7 +1,7 @@
 package player
 
 import gameResources.ReputationTile
-import gameResources.Artist.Artist
+import gameResources.Artist.ArtistCard
 import gameResources.Assistents.FreeAssistent
 import gameResources.workOfArt.WorkOfArt
 
@@ -11,7 +11,7 @@ class playerState {
 	public List<WorkOfArt> artGallery;
 	public List<WorkOfArt> artSold;
 	
-	public Artist comission;
+	public ArtistCard comission;
 	
 	public ReputationBonus[] reputationBonus;//fixed size = 6
 	public ReputationTile[] reputationTile; //fixed size = 6
