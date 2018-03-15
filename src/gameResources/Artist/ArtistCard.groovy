@@ -4,7 +4,7 @@ import gameResources.ColorType
 import gameResources.FameStars
 import gameResources.workOfArt.ArtType
 
-class Artist {
+class ArtistCard {
 	
 	//closed side
 	public int defaultFameIndex;
@@ -17,4 +17,19 @@ class Artist {
 	//opened side
 	public int currentFameIndex;
 	public FameRoad fameRoad;
+	
+	public ArtistCard(ArtistCard v)
+	{
+		if(v != null)
+		{
+			this.defaultFameIndex = v.defaultFameIndex;
+			this.defaultFameStars = v.defaultFameStars;
+			this.promo = v.promo;
+			
+			this.art = v.art;
+			this.color = v.color;
+
+			this.fameRoad = v.fameRoad;
+		}
+	}
 }
