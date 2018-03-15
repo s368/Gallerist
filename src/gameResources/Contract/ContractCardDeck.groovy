@@ -1,6 +1,8 @@
 package gameResources.Contract
 
+import gameResources.Visitors.Visitor
 import gameResources.workOfArt.ArtType
+import gameResources.textDB
 import utils.Deck
 
 class ContractCardDeck {
@@ -32,7 +34,7 @@ class ContractCardDeck {
 					println("cc=" + cc.bonus);
 				}
 				
-				this.deck.localt.add(cc);
+				this.addCopy(cc);
 				println("deck=" + deck.get().art);
 			}
 			else//set of 'art'.
@@ -48,7 +50,7 @@ class ContractCardDeck {
 							println("cc=" + cc.bonus);
 						}
 						
-						this.deck.localt.add(cc);
+						this.addCopy(cc);
 						println("deck=" + deck.get().art);
 		
 				}//cycle by 'art' for '*'.
@@ -58,4 +60,21 @@ class ContractCardDeck {
 		println("number of contract cards = " + deck.localt.size());
 		this.deck.shuffle();
 	}//end of constructor.
+	
+	public addCopy(ContractCard ccOld)
+	{
+		ContractCard ccNew = new ContractCard(ccOld);
+		this.deck.localt.add(ccNew);
+	}
+	
+	public static main(args)
+	{
+		ContractCardDeck ccDeck = new ContractCardDeck(textDB.contractCardList);
+		
+		int i = 1;
+		for(item in ccDeck.deck.localt)
+		{
+			println((i++) + " art = " + item.art + " bonus = " + item.bonus);
+		}
+	}
 }
