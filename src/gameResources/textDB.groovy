@@ -21,7 +21,7 @@ class textDB {
 		[art:"Sculpture",bonus:"GetInfluence"],
 	]
 
-	public static def artistList = [//16 artists
+	public static def artistList = [//16 artists.
 		[fame:5,star:"GreenOne",promo:2,art:"Photo",color:"red",road:[0,6,9,12,15,19]],
 		[fame:10,star:"GreenThree",promo:3,art:"Paint",color:"red",road:[0,0,0,12,15,19]],
 		[fame:8,star:"Green“‚Ó",promo:3,art:"Digital",color:"red",road:[0,0,9,12,15,19]],
@@ -36,4 +36,22 @@ class textDB {
 		[rose:14,brown:14,white:12]
 	]
 
+	//Brown, Rose, BrownOrWhite, RoseOrWhite, Any
+	public static def workOfArtList = [//32 works of art.
+		[art:"Digital",promo:0,tickets:["Any"]],
+		[art:"Digital",promo:2,tickets:["Any","Any"]],
+		[art:"Digital",promo:0,tickets:["Rose"]],
+		[art:"Digital",promo:1,tickets:["RoseOrWhite","Brown"]],
+		[art:"Digital",promo:1,tickets:["Any","Any"]],
+		[art:"Digital",promo:1,tickets:["BrownOrWhite","Rose"]],
+		//
+		[art:"Photo",promo:1,tickets:["BrownOrWhite","Rose"]],
+		[art:"Photo",promo:2,tickets:["Any","Any"]],
+		[art:"Photo",promo:0,tickets:["Rose"]],
+		[art:"Photo",promo:1,tickets:["RoseOrWhite","Brown"]],
+		[art:"Photo",promo:0,tickets:["Any"]],
+		[art:"Photo",promo:1,tickets:["Any","Any"]],
+		[art:"Photo",promo:0,tickets:["Any"]],
+		[art:"Photo",promo:0,tickets:["Brown"]]
+	]
 }
