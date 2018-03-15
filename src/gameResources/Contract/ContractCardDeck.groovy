@@ -38,7 +38,6 @@ class ContractCardDeck {
 			}//e.g. "Paint" vs "*".
 		}//cycle by textDB list.
 		
-		println("number of contract cards = " + deck.localt.size());
 		this.deck.shuffle();
 	}//end of constructor.
 	
