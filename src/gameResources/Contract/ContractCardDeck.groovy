@@ -35,7 +35,7 @@ class ContractCardDeck {
 						
 					this.addCopy(cc);
 				}//cycle by 'art' for '*'.
-			}//e.g. "Paint" vs "*".
+			}//if e.g. "Paint" vs "*".
 		}//cycle by textDB list.
 		
 		this.deck.shuffle();

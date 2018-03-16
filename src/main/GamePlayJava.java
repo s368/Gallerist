@@ -2,6 +2,7 @@ package main;
 
 import gameResources.textDB;
 import gameResources.Contract.ContractCardDeck;
+import gameResources.workOfArt.ArtType;
 //import groovy.json.JsonSlurper;
 
 class GamePlayJava {
@@ -9,6 +10,10 @@ class GamePlayJava {
 	public static void main(String[] args) {
 		
 		System.out.println("Hi, Word from main!");
+		
+		ArtType art;
+		art = ArtType.Digital;
+		System.out.println("art = " + art);
 		
 		initGameBoard();
 		
