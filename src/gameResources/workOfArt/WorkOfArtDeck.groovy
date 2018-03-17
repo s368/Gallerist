@@ -15,7 +15,10 @@ class WorkOfArtDeck {
 		{
 			woa.art = item.art;
 			woa.promo = item.promo;
-			woa.tickets = item.tickets;
+			for(tic in item.tickets)
+			{
+				woa.tickets.tickets.add(tic);
+			}
 			
 			this.addCopy(woa);
 		}
@@ -34,7 +37,10 @@ class WorkOfArtDeck {
 		int i = 1;
 		for(item in woaDeck.deck.localt)
 		{
-			println((i++) + " art = " + item.art + " promo = " + item.promo + " tickets = " + item.tickets);
+			for(tic in item.tickets.tickets)
+			{
+				println((i++) + " art = " + item.art + " promo = " + item.promo + " tickets = " + tic);
+			}
 		}
 	}
 }

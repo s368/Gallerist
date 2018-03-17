@@ -14,6 +14,7 @@ class WorkOfArt {
 		{
 			this.art = v.art;
 			this.tickets = v.tickets;
+			this.promo = v.promo;
 		}
 	}
 }
