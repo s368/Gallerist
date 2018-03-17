@@ -11,20 +11,16 @@ class WorkOfArtDeck {
 	{
 		WorkOfArt woa = new WorkOfArt();
 		
-		int i = 1;
 		for(item in a)
 		{
 			woa.art = item.art;
-			println(i + " item.art = " + item.art);
 			woa.promo = item.promo;
 			
 			woa.tickets.tickets.clear();
 			for(tic in item.tickets)
 			{
-				println(i + " tic =" + tic);
 				woa.tickets.tickets.add(tic);
 			}
-			i++;
 			this.addCopy(woa);
 		}
 	}
