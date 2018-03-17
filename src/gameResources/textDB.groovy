@@ -24,12 +24,22 @@ class textDB {
 	public static def artistList = [//16 artists.
 		[fame:5,star:"GreenOne",promo:2,art:"Photo",color:"red",road:[0,6,9,12,15,19]],
 		[fame:10,star:"GreenThree",promo:3,art:"Paint",color:"red",road:[0,0,0,12,15,19]],
-		[fame:8,star:"Green“‚Ó",promo:3,art:"Digital",color:"red",road:[0,0,9,12,15,19]],
+		[fame:8,star:"Green“wo",promo:3,art:"Digital",color:"red",road:[0,0,9,12,15,19]],
 		[fame:3,star:"GreenOne",promo:0,art:"Sculpture",color:"blue",road:[0,5,8,11,15,19]],
 		[fame:1,star:"",promo:0,art:"Photo",color:"blue",road:[2,5,8,11,15,19]],
 		[fame:1,star:"",promo:0,art:"Digital",color:"blue",road:[2,5,8,11,15,19]],
 		[fame:5,star:"GreenOne",promo:1,art:"Paint",color:"blue",road:[0,6,9,12,15,19]],
 		[fame:10,star:"GreenThree",promo:3,art:"Sculpture",color:"red",road:[0,0,0,12,15,19]],
+		//
+		[fame:4,star:"GreenOne",promo:1,art:"Photo",color:"blue",road:[0,6,9,12,15,19]],
+		[fame:5,star:"GreenOne",promo:1,art:"Sculpture",color:"blue",road:[0,6,9,12,15,19]],
+		[fame:3,star:"GreenOne",promo:0,art:"Paint",color:"blue",road:[0,5,8,11,15,19]],
+		[fame:4,star:"GreenOne",promo:1,art:"Digital",color:"blue",road:[0,6,9,12,15,19]],
+		//
+		[fame:8,star:"GreenTwo",promo:3,art:"Photo",color:"red",road:[0,0,9,12,15,19]],
+		[fame:7,star:"GreenTwo",promo:2,art:"Sculpture",color:"red",road:[0,0,9,12,15,19]],
+		[fame:7,star:"GreenTwo",promo:2,art:"Paint",color:"red",road:[0,0,9,12,15,19]],
+		[fame:5,star:"GreenOne",promo:2,art:"Digital",color:"red",road:[0,6,9,12,15,19]],
 	]
 
 	public static def visitorList = [

@@ -16,7 +16,7 @@ class ArtistCard {
 	
 	//opened side
 	public int currentFameIndex;
-	public FameRoad fameRoad;
+	public FameRoad fameRoad = new FameRoad();
 	
 	public ArtistCard(ArtistCard v)
 	{
