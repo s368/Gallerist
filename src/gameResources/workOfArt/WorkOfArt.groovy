@@ -13,8 +13,13 @@ class WorkOfArt {
 		if(v != null)
 		{
 			this.art = v.art;
-			this.tickets = v.tickets;
 			this.promo = v.promo;
+
+			for(item in v.tickets.tickets)
+			{
+				this.tickets.tickets.add(item);
+			}
+			
 		}
 	}
 }
