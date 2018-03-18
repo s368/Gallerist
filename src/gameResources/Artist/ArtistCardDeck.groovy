@@ -15,7 +15,6 @@ class ArtistCardDeck {
 		for(item in a)
 		{
 			aCard.defaultFameIndex = item.fame;
-			println("item.star =" + item.star);
 			aCard.defaultFameStars = item.star;
 			aCard.promo = item.promo;
 			
@@ -43,10 +42,12 @@ class ArtistCardDeck {
 	{
 		ArtistCardDeck<ArtistCard> acDeck = new ArtistCardDeck<ArtistCard>(textDB.artistList);
 		
-		int i = 0;
+		int i = 1;
 		for(item in acDeck.deck.localt)
 		{
 			println(i + " art =" + item.art);
+			println(i + " color =" + item.color);
+			println(i + " greenOne =" + item.fameRoad.greenOne);
 			i++;
 		}
 	}
