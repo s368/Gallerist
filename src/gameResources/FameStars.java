@@ -2,6 +2,6 @@ package gameResources;
 
 public enum FameStars {
 	
-	GreenOne, GreenTwo, GreenThree, GoldOne, GoldTwo, Brilliant 
+	None, GreenOne, GreenTwo, GreenThree, GoldOne, GoldTwo, Brilliant 
 
 }

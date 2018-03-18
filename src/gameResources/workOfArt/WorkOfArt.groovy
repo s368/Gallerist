@@ -19,7 +19,6 @@ class WorkOfArt {
 			{
 				this.tickets.tickets.add(item);
 			}
-			
 		}
 	}
 }

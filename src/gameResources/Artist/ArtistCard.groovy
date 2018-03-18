@@ -29,7 +29,12 @@ class ArtistCard {
 			this.art = v.art;
 			this.color = v.color;
 
-			this.fameRoad = v.fameRoad;
+			this.fameRoad.greenOne = v.fameRoad.greenOne;
+			this.fameRoad.greenTwo = v.fameRoad.greenTwo;
+			this.fameRoad.greenThree = v.fameRoad.greenThree;
+			this.fameRoad.goldOne = v.fameRoad.goldOne;
+			this.fameRoad.goldTwo = v.fameRoad.goldTwo;
+			this.fameRoad.brilliant = v.fameRoad.brilliant;
 		}
 	}
 }
