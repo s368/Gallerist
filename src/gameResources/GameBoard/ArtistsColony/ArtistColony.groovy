@@ -3,6 +3,7 @@ package gameResources.GameBoard.ArtistsColony
 import gameResources.Artist.ArtistCard
 import gameResources.Artist.ArtistCardDeck
 import gameResources.workOfArt.WorkOfArtDeck
+import gameResources.workOfArt.ArtType
 import gameResources.textDB
 
 class ArtistColony {
@@ -24,7 +25,15 @@ class ArtistColony {
 	
 	public ArtisColony
 	{
-		
+		int free = 8;
+		while(free)
+		{
+			ArtistCard aCard = this.artistDeck.deck.dealOne();
+			if(aCard.art == ArtType.Paint)
+			{
+			
+			}
+		}
 	}
 	
 	static main(args) {
