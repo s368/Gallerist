@@ -47,7 +47,7 @@ class ArtistColony {
 //		}
 	}
 	
-	public bool isEmpty(ArtType art, ColorType color)
+	public boolean isEmpty(ArtType art, ColorType color)
 	{
 		if(this.artistCardPlace != null &&
 		this.artistCardPlace.get(art) != null &&
@@ -60,15 +60,13 @@ class ArtistColony {
 	}
 
 	
-	static main(args) 
-	{
+	static main(args) {
 		ArtistColony aColony = new ArtistColony();
 		ArtistCard aCard = new ArtistCard();
-		for(art in ArtType)
-		{
+		for(art in ArtType) {
 			//ArtistCard aCard = this.artistDeck.deck.dealOne();
 			//if(aCard.art == ArtType.Paint){}
-			
+
 			for(color in ColorType)
 			{
 				println("artistCardPlace = " + aColony.artistCardPlace);
@@ -83,5 +81,20 @@ class ArtistColony {
 				}
 			}
 		}
-	}
-}
+
+		for(art in ArtType)
+		{
+			for(color in ColorType)
+			{
+				if(aColony.isEmpty(art, color))
+				{
+					println("aColony(" + art + "," + color + ") is empty!");
+				}
+				else
+				{
+					println("aColony(" + art + "," + color + ") is NOT empty!");
+				}
+			}//for by art
+		}//for by color
+	}//main
+}//class
