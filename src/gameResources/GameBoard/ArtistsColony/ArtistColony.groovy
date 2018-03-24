@@ -47,6 +47,19 @@ class ArtistColony {
 //		}
 	}
 	
+	public bool isEmpty(ArtType art, ColorType color)
+	{
+		if(this.artistCardPlace != null &&
+		this.artistCardPlace.get(art) != null &&
+		this.artistCardPlace.get(art).get(color) != null) 
+		{
+			return false;
+		}
+		
+		return true;
+	}
+
+	
 	static main(args) 
 	{
 		ArtistColony aColony = new ArtistColony();
