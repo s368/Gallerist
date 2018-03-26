@@ -26,37 +26,67 @@ class ArtistColony {
 	
 	public Map<ArtType,Map<ColorType,ArtistCard>> artistCardPlace = new HashMap<ArtType,HashMap<ColorType,ArtistCard>>();
 	
-	public ArtisColony
+	public ArtistColony()
+	{
+		ArtistCard aCard = new ArtistCard();
+		Map<ColorType,ArtistCard> hashInternal;
+		
+		int n = 0;
+		while(!this.isComplete())
+		{
+			println("i = " + n++);
+			aCard = this.artistDeck.deck.dealOne();
+			
+//			if(this.artistCardPlace != null &&
+			if(this.artistCardPlace.get(aCard.art) == null)
+			{
+				hashInternal = new HashMap<ColorType,ArtistCard>();
+				hashInternal.put(aCard.color, aCard)
+				this.artistCardPlace.put(aCard.art, hashInternal)
+			}
+			else
+			{
+				hashInternal = this.artistCardPlace.get(aCard.art);
+				hashInternal.put(aCard.color, aCard)
+			}
+		}
+	}
+	
+	public CheckArtisColony()
 	{
 		ArtistCard aCard = new ArtistCard();
 		Map<ColorType,ArtistCard> hashInternal = new HashMap<ColorType,ArtistCard>();
 		
+		println("deck size = " + this.artistDeck.deck.localt.size());
+		
+		int n = 0;
 		while(!this.isComplete())
 		{
+			println("i = " + n++);
 			aCard = this.artistDeck.deck.dealOne();
 			println("aCard reference: " + aCard);
 			
-			if(this.isEmpty(aCard.art, aCard.color))
+			if(this.isEmpty(aCard.art, aCard.color)) 
 			{
 				hashInternal.put(aCard.color,aCard);
 
-				if(this.isEmpty(aCard.art, aCard.color))
-					{
-						println("ArtistColony before: art = " + aCard.art + " color = " + aCard.color + " is empty!");
-					}
-					else
-					{
-						println("ArtistColony before: art = " + aCard.art + " color = " + aCard.color + " is NOT empty!");
-					}
-	
+				if(this.isEmpty(aCard.art, aCard.color)) 
+				{
+					println("ArtistColony before: art = " + aCard.art + " color = " + aCard.color + " is empty!");
+				}
+				else 
+				{
+					println("ArtistColony before: art = " + aCard.art + " color = " + aCard.color + " is NOT empty!");
+				}
+
 				this.artistCardPlace.put(aCard.art,hashInternal);
 
 				println("ArtistColony: art = " + aCard.art + " color = " + aCard.color);
-				if(this.isEmpty(aCard.art, aCard.color))
+				if(this.isEmpty(aCard.art, aCard.color)) 
 				{
 					println("ArtistColony after: art = " + aCard.art + " color = " + aCard.color + " is empty!");
 				}
-				else
+				else 
 				{
 					println("ArtistColony after: art = " + aCard.art + " color = " + aCard.color + " is NOT empty!");
 				}
@@ -122,7 +152,7 @@ class ArtistColony {
 				println("artistCardPlace = " + aColony.artistCardPlace);
 				if(aColony.artistCardPlace != null)
 				{
-					//aCard = aColony.artistCardPlace.get(art);
+					aCard = aColony.artistCardPlace.get(art).get(color);
 					println("aCard = " + aCard);
 				}
 				else

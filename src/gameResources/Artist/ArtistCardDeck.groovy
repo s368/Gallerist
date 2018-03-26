@@ -30,6 +30,8 @@ class ArtistCardDeck {
 
 			this.addCopy(aCard);
 		}
+		
+		this.deck.shuffle();
 	}
 	
 	public addCopy(ArtistCard aOld)
