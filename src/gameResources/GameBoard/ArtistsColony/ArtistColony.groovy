@@ -28,6 +28,41 @@ class ArtistColony {
 	
 	public ArtisColony
 	{
+		ArtistCard aCard = new ArtistCard();
+		Map<ColorType,ArtistCard> hashInternal = new HashMap<ColorType,ArtistCard>();
+		
+		while(!this.isComplete())
+		{
+			aCard = this.artistDeck.deck.dealOne();
+			println("aCard reference: " + aCard);
+			
+			if(this.isEmpty(aCard.art, aCard.color))
+			{
+				hashInternal.put(aCard.color,aCard);
+
+				if(this.isEmpty(aCard.art, aCard.color))
+					{
+						println("ArtistColony before: art = " + aCard.art + " color = " + aCard.color + " is empty!");
+					}
+					else
+					{
+						println("ArtistColony before: art = " + aCard.art + " color = " + aCard.color + " is NOT empty!");
+					}
+	
+				this.artistCardPlace.put(aCard.art,hashInternal);
+
+				println("ArtistColony: art = " + aCard.art + " color = " + aCard.color);
+				if(this.isEmpty(aCard.art, aCard.color))
+				{
+					println("ArtistColony after: art = " + aCard.art + " color = " + aCard.color + " is empty!");
+				}
+				else
+				{
+					println("ArtistColony after: art = " + aCard.art + " color = " + aCard.color + " is NOT empty!");
+				}
+			}
+		}
+		
 //		this.artistCardPlace.put(ArtType.Photo, null)
 //		this.artistCardPlace.put(ArtType.Paint, null)
 //		this.artistCardPlace.put(ArtType.Sculpture, null)
@@ -59,7 +94,22 @@ class ArtistColony {
 		return true;
 	}
 
-	
+	public boolean isComplete()
+	{
+		for(art in ArtType)
+		{
+			for(color in ColorType)
+			{
+				if(this.isEmpty(art, color))
+				{
+					return false;
+				}
+			}//for by art
+		}//for by color
+		
+		return true;
+	}
+
 	static main(args) {
 		ArtistColony aColony = new ArtistColony();
 		ArtistCard aCard = new ArtistCard();
@@ -72,7 +122,7 @@ class ArtistColony {
 				println("artistCardPlace = " + aColony.artistCardPlace);
 				if(aColony.artistCardPlace != null)
 				{
-					aCard = aColony.artistCardPlace.get(art);
+					//aCard = aColony.artistCardPlace.get(art);
 					println("aCard = " + aCard);
 				}
 				else
@@ -96,5 +146,15 @@ class ArtistColony {
 				}
 			}//for by art
 		}//for by color
+		
+		if(aColony.isComplete())
+		{
+			println("aColony is complete!");
+		}
+		else
+		{
+			println("aColony is NOT complete!");
+		}
+		
 	}//main
 }//class
