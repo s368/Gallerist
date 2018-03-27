@@ -26,7 +26,37 @@ class ArtistColony {
 	
 	public Map<ArtType,Map<ColorType,ArtistCard>> artistCardPlace = new HashMap<ArtType,HashMap<ColorType,ArtistCard>>();
 	
-	public ArtistColony()
+	public initEmpty()
+	{
+		for(art in ArtType)
+			{
+				Map<ColorType,ArtistCard> hashInternal = new HashMap<ColorType,ArtistCard>();
+				
+				for(color in ColorType)
+				{
+					hashInternal.put(color, null);
+					this.artistCardPlace.put(art, hashInternal);
+				}//for by art
+			}//for by color
+	}
+
+	public fillFromDeck()
+	{
+		ArtistCard aCard = new ArtistCard();
+		Map<ColorType,ArtistCard> hashInternal;
+		
+		int n = 0;
+		while(!this.isComplete())
+		{
+			println("i = " + n++);
+			aCard = this.artistDeck.deck.dealOne();
+
+			hashInternal = this.artistCardPlace.get(aCard.art);
+			hashInternal.put(aCard.color, aCard)
+		}
+	}	
+	
+	public ArtistColonyFirstVariant()
 	{
 		ArtistCard aCard = new ArtistCard();
 		Map<ColorType,ArtistCard> hashInternal;
@@ -140,6 +170,19 @@ class ArtistColony {
 		return true;
 	}
 
+	public boolean toPrint()
+	{
+		for(art in ArtType)
+		{
+			for(color in ColorType)
+			{
+				println("art = " + art + " color = " + color + " ArtistCard = " + this.artistCardPlace.get(art).get(color));
+			}//for by art
+		}//for by color
+		
+		return true;
+	}
+
 	static main(args) {
 		ArtistColony aColony = new ArtistColony();
 		ArtistCard aCard = new ArtistCard();
@@ -150,7 +193,7 @@ class ArtistColony {
 			for(color in ColorType)
 			{
 				println("artistCardPlace = " + aColony.artistCardPlace);
-				if(aColony.artistCardPlace != null)
+				if(aColony.artistCardPlace != null && aColony.artistCardPlace.get(art) != null)
 				{
 					aCard = aColony.artistCardPlace.get(art).get(color);
 					println("aCard = " + aCard);
@@ -184,6 +227,21 @@ class ArtistColony {
 		else
 		{
 			println("aColony is NOT complete!");
+		}
+		
+		ArtistColony ac2 = new ArtistColony();
+		
+		ac2.initEmpty();
+		ac2.fillFromDeck();
+		ac2.toPrint();
+		
+		if(ac2.isComplete())
+		{
+			println("Complete!");
+		}
+		else
+		{
+			println("NOT complete!");
 		}
 		
 	}//main
