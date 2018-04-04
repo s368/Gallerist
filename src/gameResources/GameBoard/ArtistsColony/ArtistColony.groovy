@@ -36,8 +36,8 @@ class ArtistColony {
 				{
 					hashInternal.put(color, null);
 					this.artistCardPlace.put(art, hashInternal);
-				}//for by art
-			}//for by color
+				}//for by color - internal hash.
+			}//for by art - external hash.
 	}
 
 	public fillFromDeck()
@@ -177,8 +177,8 @@ class ArtistColony {
 			for(color in ColorType)
 			{
 				println("art = " + art + " color = " + color + " ArtistCard = " + this.artistCardPlace.get(art).get(color));
-			}//for by art
-		}//for by color
+			}//for by color.
+		}//for by art.
 		
 		return true;
 	}
@@ -231,6 +231,7 @@ class ArtistColony {
 		
 		ArtistColony ac2 = new ArtistColony();
 		
+		//The second version of implementation.
 		ac2.initEmpty();
 		ac2.fillFromDeck();
 		ac2.toPrint();
