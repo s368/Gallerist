@@ -93,10 +93,10 @@ class ArtistPlace {
 
 	static main(args)
 	{
-		ArtistPlace ac2 = new ArtistPlace();
-		ac2.toPrint();
+		ArtistPlace ap = new ArtistPlace();
+		ap.toPrint();
 		
-		if(ac2.isComplete())
+		if(ap.isComplete())
 		{
 			println("Complete!");
 		}
